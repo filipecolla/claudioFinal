@@ -102,8 +102,8 @@ function FormularioCadastroCliente({ }: Props) {
                         onChange={(e) => setSexo(e.target.value)}
                     >
                         <option>Selecione o genero</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
                     </select>
                 </div>
                 <div className="form-group">

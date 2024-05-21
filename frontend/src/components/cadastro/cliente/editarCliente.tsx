@@ -67,8 +67,8 @@ function EditarCliente(props: ICliente) {
                     <div className='form-cliente container-fluid'>
                         <form id='editar-cliente' onSubmit={handleSubmit}>
                             <div className='seletor-secao'>
-                                <div onClick={() => changeSecao('Informações Básicas')}>Informações</div>
-                                <div onClick={() => changeSecao('Endereço')}>Endereço</div>
+                                <div className='seletor-secao' onClick={() => changeSecao('Informações Básicas')}>Informações</div>
+                                <div className='seletor-secao' onClick={() => changeSecao('Endereço')}>Endereço</div>
                             </div>
                             <h4>{secaoForm}</h4>
                             {secaoForm === 'Informações Básicas' &&

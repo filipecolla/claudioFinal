@@ -5,26 +5,26 @@ import { Produtos } from "./produto";
 @Entity()
 export class Compra {
     @PrimaryGeneratedColumn()
-    compraID: number
-
-    @Column({ default: null })
-    quantidadeProduto: number
-
-    @Column({ default: null })
-    valorProduto: number
+    compraID: number | undefined;
 
     @ManyToOne(() => Clientes)
     @JoinColumn({ name: "clienteID" })
-    cliente: Clientes
+    cliente: Clientes;
 
     @ManyToOne(() => Produtos)
     @JoinColumn({ name: "produtoID" })
-    produto: Produtos
+    produto: Produtos;
 
-    constructor(cliente: Clientes, produto: Produtos, valorServico: number, quantidadeProduto: number) {
-        this.cliente = cliente
-        this.produto = produto
-        this.valorProduto = valorServico
-        this.quantidadeProduto = quantidadeProduto
+    @Column({default: null})
+    quantidadeProduto: number;
+
+    @Column({default: null})
+    valorProduto: number;
+
+    constructor(cliente: Clientes, produto: Produtos, quantidadeProduto: number, valorProduto: number) {
+        this.cliente = cliente;
+        this.produto = produto;
+        this.quantidadeProduto = quantidadeProduto;
+        this.valorProduto = valorProduto;
     }
 }

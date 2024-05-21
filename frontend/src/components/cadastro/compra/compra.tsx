@@ -40,7 +40,7 @@ function CompraProduto(cliente: IcompraClienteProduto) {
         <div className="list-group-item list-group-item-action">
             <div className="item-listado">
                     <div className="cliente-details">
-                        <h5> Cliente ID: {cliente.cliente.nome}</h5>
+                        <h5> Cliente: {cliente.cliente.nome}</h5>
                     <div className="acoes">
                         <EditarCompraProduto
                             cliente={cliente.cliente}

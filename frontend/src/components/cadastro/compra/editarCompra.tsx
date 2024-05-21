@@ -64,23 +64,7 @@ const EditarCompraProduto: React.FC<IcompraClienteProduto> = (props) => {
                     <div className='form-cliente container-fluid'>
                         <form id='editar-cliente' onSubmit={handleSubmit}>
                             <div className='seletor-secao'>
-                                <div onClick={() => changeSecao('Informações Básicas')}>Informações</div>
-                                <div onClick={() => changeSecao('Compras')}>Compras</div>
                             </div>
-                            <h4>{secaoForm}</h4>
-                            {secaoForm === 'Informações Básicas' &&
-                                <>
-                                    <div>
-                                        <label htmlFor="cliente">Cliente ID: </label>
-                                        <input className="form-control" id="cliente" type="text" value={clienteID} onChange={(e) => handleChange(e, setClienteID)} />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="produto">Produto ID: </label>
-                                        <input className="form-control" id="produto" type="text" value={produtoID} onChange={(e) => handleChange(e, setProdutoID)} />
-                                    </div>
-                                </>
-                            }
-                            {secaoForm === 'Compras' &&
                                 <>
                                     <div>
                                         <label htmlFor="quantidadeProduto">Quantidade de Produto: </label>
@@ -91,7 +75,6 @@ const EditarCompraProduto: React.FC<IcompraClienteProduto> = (props) => {
                                         <input className="form-control" id="valorProduto" type="text" value={valorProduto} onChange={(e) => handleChange(e, setValorProduto)} />
                                     </div>
                                 </>
-                            }
                             <div className='teste'>
                                 <Button variant="secondary" onClick={handleClose}>Fechar</Button>
                                 <Button variant="primary" type='submit'>Editar</Button>
