@@ -1,0 +1,106 @@
+/* home.css */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1e1c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    font-size: 15px;
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+}
+
+.navbar .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1; /* Allow the links container to grow and fill available space */
+    overflow: hidden; /* Hide overflowing links */
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.navbar .nav-links a:hover {
+    background-color: #333;
+}
+
+.home {
+    padding: 5rem 2rem 2rem; /* Adding top padding to avoid content overlap with navbar */
+    text-align: center;
+}
+
+.home h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.home p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: black;
+}
+
+.brand-logo {
+    margin-left: 20px;
+}
+
+.nav-wrapper {
+    padding-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #333;
+}
+
+.sidenav-trigger {
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+    .sidenav-trigger {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sidenav {
+        display: none;
+    }
+}
